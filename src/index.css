@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+:root {
+  /* Text */
+  --very-dark-disaturated-blue: hsl(238, 29%, 16%);
+  --soft-red: hsl(14, 88%, 65%);
+  --very-darkish-grayish-blue: hsl(237, 12%, 33%);
+  --dark-grayish-blue: hsl(240, 6%, 50%);
+
+  /* Dividers */
+  --light-grayish-blue: hsl(240, 5%, 91%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 12px;
+  box-sizing: border-box;
+}
+body {
+  background-size: cover;
+  background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 1rem;
+  width: 70vw;
+  max-width: 70vw;
+  height: 70vh;
+  max-height: 70vh;
+  background-color: white;
+  border-radius: 25px;
+  box-shadow: 0 0 15px black;
+}
+#image-side {
+  position: relative;
+  align-self: center;
+}
+#image-side img {
+  position: relative;
+  max-height: 100%;
+  max-width: 100%;
+  right: 18%;
+}
+#faq-side {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  height: 90%;
+  max-width: 90%;
+  max-height: 90vh;
+  align-self: center;
+}
+.faq-drop {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid var(--light-grayish-blue);
+  width: 100%;
+}
+.drop-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.2em;
+  color: var(--very-darkish-grayish-blue);
+}
+.drop-bar img {
+  max-width: 1rem;
+  max-height: 1rem;
+}
+.drop-bar:hover {
+  color: var(--soft-red);
+  cursor: pointer;
+}
+h1 {
+  color: var(--very-dark-disaturated-blue);
+  font-size: 3rem;
+  margin: 20% 0 6% 0;
+}
+h2 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: inherit;
+  margin: 3% 0;
+}
+p {
+  display: none;
+  color: var(--dark-grayish-blue);
+  margin-bottom: 1rem;
+}
+@media (max-width: 1000px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    max-width: 90vw;
+    height: 90vh;
+    max-height: 90vh;
+  }
+}
